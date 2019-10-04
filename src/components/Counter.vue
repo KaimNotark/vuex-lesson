@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button class="btn" @click="increment">Increment</button>
-    <button class="btn" @click="decrement">Decrement</button>
+    <button class="btn" @click="increment(100)">Increment</button>
+    <button class="btn" @click="decrement(100)">Decrement</button>
   </div>
 </template>
 
@@ -12,6 +12,9 @@ export default {
   methods: {
     ...mapMutations(["increment", "decrement"])
   }
+  // increment(by) {
+  //   this.$store.dispatch('increment', by);
+  // }
 };
 </script>
 
