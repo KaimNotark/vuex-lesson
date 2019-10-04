@@ -3,11 +3,15 @@
     <h1>Vuex</h1>
     <app-result></app-result>
     <app-another-result></app-another-result>
-    <hr>
-    <br>
+    <hr />
+    <br />
     <app-counter></app-counter>
-    <br>
+    <br />
     <app-another-counter></app-another-counter>
+    <hr />
+    <p>use "v-model"</p>
+    <input type="text" v-model="value" />
+    <p>value= {{ value }}</p>
   </div>
 </template>
 
@@ -18,6 +22,17 @@ import Result from "./components/Result.vue";
 import AnotherResult from "./components/AnotherResult.vue";
 
 export default {
+  computed: {
+    // use "v-model"
+    value: {
+      get() {
+        return this.$store.getters.value;
+      },
+      set(value) {
+        this.$store.dispatch('updateValue', value);
+      }
+    }
+  },
   components: {
     appCounter: Counter,
     appAnotherCounter: AnotherCounter,
