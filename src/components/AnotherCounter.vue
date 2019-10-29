@@ -12,6 +12,13 @@ import { mapActions } from "vuex";
 export default {
   methods: {
     ...mapActions(["asyncIncrement", "asyncDecrement"])
+  },
+  created() {
+    this.$store.subscribe((mutation, state) => {
+      console.log(mutation.type);
+      console.log(mutation.payload);
+      console.log(state.counter);
+    });
   }
 };
 </script>

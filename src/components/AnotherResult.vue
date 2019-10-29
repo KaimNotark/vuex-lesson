@@ -2,6 +2,9 @@
   <div>
     <p>Another Counter is: {{ doubleCounter }}</p>
     <p>Number of Clicks: {{ stringCounter }}</p>
+    <br>
+    <br>
+    <p class="__red">Value of counter: {{ counter }}</p>
   </div>
 </template>
 
@@ -10,7 +13,17 @@ import { mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["doubleCounter", "stringCounter"])
+    ...mapGetters(["doubleCounter", "stringCounter"]),
+
+    counter() {
+      return this.$store.state.counter;
+    }
   }
 };
 </script>
+
+<style scoped>
+.__red {
+  color: red;
+}
+</style>
