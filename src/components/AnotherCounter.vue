@@ -3,6 +3,9 @@
     <p>Work with delay 1 second:</p>
     <button class="btn" @click="asyncIncrement({by: 50, duration: 500})">Another Increment</button>
     <button class="btn" @click="asyncDecrement({by: 50, duration: 500})">Another Decrement</button>
+    <br />
+    <br />
+    <hr />
   </div>
 </template>
 
