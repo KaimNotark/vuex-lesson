@@ -8,6 +8,8 @@
     <app-counter></app-counter>
     <br />
     <app-another-counter></app-another-counter>
+    <br>
+    <app-local-storage></app-local-storage>
     <hr />
     <p>use "v-model"</p>
     <input type="text" v-model="value" />
@@ -20,6 +22,7 @@ import Counter from "./components/Counter.vue";
 import AnotherCounter from "./components/AnotherCounter.vue";
 import Result from "./components/Result.vue";
 import AnotherResult from "./components/AnotherResult.vue";
+import LocalStorage from "./components/LocalStorage.vue";
 
 export default {
   computed: {
@@ -37,7 +40,8 @@ export default {
     appCounter: Counter,
     appAnotherCounter: AnotherCounter,
     appResult: Result,
-    appAnotherResult: AnotherResult
+    appAnotherResult: AnotherResult,
+    appLocalStorage: LocalStorage
   }
 };
 </script>
